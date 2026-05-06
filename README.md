@@ -1,4 +1,5 @@
 # logistic-regression-class-separation
+
 # Performance Analysis of Logistic Regression under Controlled Class Separation and Overlap
 
 ## 📘 Overview
@@ -29,15 +30,15 @@ Synthetic datasets were generated in a three-dimensional feature space.
 
 Two Gaussian-distributed classes:
 
-\[
+```math
 X_0 \sim N(\mu_0, I), \quad X_1 \sim N(\mu_1, I)
-\]
+```
 
 Class centers:
 
-\[
+```math
 \mu_0 = (0,0,0), \quad \mu_1 = (5,5,5)
-\]
+```
 
 - Samples per class: 500
 - Total samples: 1000
@@ -50,15 +51,15 @@ Class centers:
 
 The second class center was varied as:
 
-\[
+```math
 \mu_1 = (d,d,d)
-\]
+```
 
 where:
 
-\[
+```math
 d \in \{0.5, 1.0, 1.5, ..., 6.0\}
-\]
+```
 
 This experiment analyzes how increasing separation reduces misclassification error.
 
@@ -70,21 +71,21 @@ To create overlap:
 
 - Spread parameter:
 
-\[
+```math
 \sigma = 1.8
-\]
+```
 
 - Center distance:
 
-\[
+```math
 d = 4
-\]
+```
 
 Class centers:
 
-\[
+```math
 \mu_0 = (0,0,0), \quad \mu_1 = (4,4,4)
-\]
+```
 
 This produces partially overlapping Gaussian distributions.
 
@@ -94,15 +95,15 @@ This produces partially overlapping Gaussian distributions.
 
 The probability of class membership is modeled as:
 
-\[
+```math
 P(Y=1|X)=\sigma(\beta_0+\beta^TX)
-\]
+```
 
 where the sigmoid activation is:
 
-\[
+```math
 \sigma(z)=\frac{1}{1+e^{-z}}
-\]
+```
 
 The model is trained using Maximum Likelihood Estimation (MLE).
 
@@ -112,27 +113,27 @@ The model is trained using Maximum Likelihood Estimation (MLE).
 
 L2 regularization is introduced through a Bayesian interpretation:
 
-\[
+```math
 \beta \sim N(0,\tau^2 I)
-\]
+```
 
 Objective function:
 
-\[
+```math
 L_{MAP}(\beta)=L_{MLE}(\beta)+\frac{\lambda}{2}\|\beta\|^2
-\]
+```
 
 Regularization strength is controlled using:
 
-\[
+```math
 C=\frac{1}{\lambda}
-\]
+```
 
 Values tested:
 
-\[
+```math
 C \in \{0.001,0.01,0.05,0.1,0.5,1,5,10,50,100\}
-\]
+```
 
 ---
 
@@ -200,4 +201,4 @@ MiniProject2_LogisticRegression.ipynb
 
 **Saroar Jahan Shuba**  
 M.S. Computational & Quantitative Methods  
-Lamar University  
+Lamar University
